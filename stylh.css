@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0710;
+    color: white;
+}
+
+/* MENU */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background: rgba(11, 7, 16, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #30183f;
+}
+
+header h1 {
+    color: #c77dff;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c77dff;
+}
+
+/* INÍCIO */
+
+.hero {
+    min-height: 90vh;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 70% 40%, #582079 0%, transparent 35%),
+        linear-gradient(135deg, #0b0710, #180b21);
+}
+
+.hero > div {
+    max-width: 750px;
+}
+
+.subtitulo {
+    color: #c77dff;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(55px, 10vw, 100px);
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.hero h2 span {
+    color: #c77dff;
+}
+
+.hero p:not(.subtitulo) {
+    color: #d2ccd6;
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #9d4edd;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #c77dff;
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+section {
+    padding: 90px 8%;
+}
+
+section > h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 45px;
+    color: #c77dff;
+}
+
+.texto {
+    max-width: 850px;
+    margin: auto;
+}
+
+.texto p {
+    color: #c9c3cd;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+
+.escuro {
+    background: #100b15;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #18111e;
+    padding: 30px 25px;
+    border-radius: 18px;
+    border: 1px solid #35203f;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #9d4edd;
+    box-shadow: 0 15px 35px rgba(157, 78, 221, 0.15);
+}
+
+.icone {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.card p {
+    color: #aaa2b0;
+    line-height: 1.6;
+}
+
+/* CURIOSIDADES */
+
+.curiosidades {
+    max-width: 900px;
+    margin: auto;
+}
+
+.curiosidades div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px 0;
+    border-bottom: 1px solid #302535;
+}
+
+.curiosidades span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #9d4edd;
+}
+
+.curiosidades p {
+    color: #c9c3cd;
+    line-height: 1.6;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #060408;
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #291832;
+}
+
+footer h3 {
+    color: #c77dff;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #999;
+}
+
+footer .copyright {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero h2 {
+        font-size: 58px;
+    }
+
+    section > h2 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .curiosidades div {
+        align-items: flex-start;
+    }
+}
